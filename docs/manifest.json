@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/Dropbox/UNITY/RuntimeAudioClipLoader/neit.in/RuntimeAudioClipLoader/documentation_docfx_project",
+  "source_base_path": "C:/Dropbox/Hot/Unity/RuntimeAudioClipLoader/neit.in/RuntimeAudioClipLoader/documentation_docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,10 +9,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.AudioLoader.html",
-          "hash": "8pnOyiNq2DjB12NrxgYLig=="
+          "hash": "vznkVDCjQ28MdAfEIDxErls3aqeaKl9mdv5wB0CltCY="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -21,10 +20,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.AudioLoaderConfig.html",
-          "hash": "4UPGT1pYha9NEFSyctxVrQ=="
+          "hash": "Zvf+cWM0LoJJii2eQJ0ccKZXOUBohJW7HNHif9gKGQY="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -33,10 +31,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.AudioDataReader.html",
-          "hash": "UkLcBPt4NAdPs+gm42a2iw=="
+          "hash": "Tffbd6wvg8qI6de21lqKxJuP61839o2vdo5yBiSHz50="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -45,10 +42,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.BackgroundThreadRunner.html",
-          "hash": "tWQBIw4n4t5TCzjaQIs8UA=="
+          "hash": "tKWeVHW/rLrtul901s+zI9wB9k4O/DIn8c6R6eS5oJE="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -57,10 +53,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.FloatArrayPool.html",
-          "hash": "7CLGl0Lxd9Q+EMeC4+e+xw=="
+          "hash": "k1PUEwyJb7seG5ymdWsJ8exrGhdBTsSxQ8o0AffJVeM="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -69,10 +64,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.IActionAndCoroutineRunner.html",
-          "hash": "/BB7moUi4/d3FG11GVsdZw=="
+          "hash": "HutUWMA2R/brxcQa6HGZ5Q/eJzP+dQBC5HW2HXzbfik="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -81,10 +75,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.IActionRunner.html",
-          "hash": "SftUHVYTvSGqHdKwJNizTw=="
+          "hash": "sHVXk/pzNb7m+uze1rmZs7sYS7yOzYClIWDs+4auok4="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -93,22 +86,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.IFloatArrayPool.html",
-          "hash": "kMEos+FBjHnvOBvXi4EBgg=="
+          "hash": "VDtZ+Kr5+v9h8YB8lbodRsWbpmX9l7+0FT/vA9c47tU="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RuntimeAudioClipLoader.Internal.NotifyLGPL.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RuntimeAudioClipLoader.Internal.NotifyLGPL.html",
-          "hash": "OX5VOacnTVXxKVCNuWrDHw=="
-        }
-      },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -117,10 +97,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.ReadFullyStream.html",
-          "hash": "4+zqZyqlsa50RA2fQMiPVw=="
+          "hash": "NtNOMVYGeBYmF7xPVPAhAAqHh4LR55r0+TLqcoMYG18="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -129,10 +108,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.UnityMainThreadRunner.html",
-          "hash": "Nq7AnmVUgHiwiwl9FIsJLA=="
+          "hash": "JkXk0vjm2bFN6g2MIVc6IsoD25XttmpcEl4YUe0SdOw="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -141,10 +119,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.html",
-          "hash": "DpgevT2kBRVwz2PWw/w9iw=="
+          "hash": "5VH6+FmEON8qOSsdk0Ek1GXMpUvA9ud2WyQRgQ4Zc2k="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -153,10 +130,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.LoadMethod.html",
-          "hash": "I2Km2fqPweY9WvfQxlfusA=="
+          "hash": "C+M+J3+I78jef1FWBwmR/XuUCCpeUwQT52bWx8B7YXA="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -165,10 +141,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Manager.html",
-          "hash": "CUg69y9wzY2FzFOl/vb8Ng=="
+          "hash": "b2ndRE+DicOOAoPEIt54MIVqDWCHVZ5Jn+ipkSWMXM0="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -177,10 +152,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.PreferredDecoder.html",
-          "hash": "c7WrUxLU3wxzCaQRLIBrlw=="
+          "hash": "8WGJyg2bFeCr2MCcTrES9o1R/5Qf72RqeNHHx4N+LfU="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -189,10 +163,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.SelectDecoder.html",
-          "hash": "JWblan7Wtqvso4cDyFMQnA=="
+          "hash": "18A1z4dr9dI915a4xsTZXM7zyiym9O628tr3JsRySLA="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -201,10 +174,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.UsedDecoder.html",
-          "hash": "t+T2y3bpMO83fQiF7jI52g=="
+          "hash": "FuqwrFH2mzCr6KIOSOD7VevvS07aS3jhEkG/koBPAtM="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -213,10 +185,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.html",
-          "hash": "HW4IBxtxgW7L30dfv9thdQ=="
+          "hash": "E93huWTAFbIN8pILWIt5U4aDauk6Prynrb6+er4EliU="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -225,10 +196,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoaderDemo.AudioGraph.ColorFilledTexture2DFactory.html",
-          "hash": "u3E2vx2ohgYyD5sWagyxHw=="
+          "hash": "9a0twulofxUFXfBsQfjSfhURV8l8zlWD4SidjqOAUpo="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -237,22 +207,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoaderDemo.AudioGraph.html",
-          "hash": "I/mTjqDQMvRFgKb94hyHFQ=="
+          "hash": "DKIeIiGJdrCcclgrnEcNpg1l137DlSeVOCSuagVFZdw="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RuntimeAudioClipLoaderDemo.DemoStreamingAssetsEditor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RuntimeAudioClipLoaderDemo.DemoStreamingAssetsEditor.html",
-          "hash": "bGL/Ap231FtYbdGYpkSKQg=="
-        }
-      },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -261,10 +218,20 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoaderDemo.EnumSelectionGrid-1.html",
-          "hash": "pP9jxZTVoThK5xY7KeWpOw=="
+          "hash": "6XMNa53zW+Zg53G71+b1SIv6YsYell/LCDL6Fd8fsR4="
         }
       },
-      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RuntimeAudioClipLoaderDemo.LoadAllStreamingAssets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RuntimeAudioClipLoaderDemo.LoadAllStreamingAssets.html",
+          "hash": "XEeZ4GUew4rf1T2yf0vr1ANY/z4M0a8sWdVkk/lHgPU="
+        }
+      },
       "version": ""
     },
     {
@@ -273,10 +240,20 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoaderDemo.LoadFromStreamingAssetsOrInternet.html",
-          "hash": "wQyBJs4sIB9weufkaikVtw=="
+          "hash": "zUWqpW+ARru6GLxcXCe7ev4AkARRXsXAtHXlDV6Rv3k="
         }
       },
-      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RuntimeAudioClipLoaderDemo.SimplestLoadFromDisk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RuntimeAudioClipLoaderDemo.SimplestLoadFromDisk.html",
+          "hash": "+/Q1XEoBhWqSjgkCNKkhRrcd42AeZ7dEANtyKJee2nw="
+        }
+      },
       "version": ""
     },
     {
@@ -285,10 +262,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoaderDemo.SimplestLoadFromInternet.html",
-          "hash": "GCVpdolXlGZEpQS7qN7cfA=="
+          "hash": "VQlivpaesBkBMSswY/1lpXgNL7s5KUumFQRD7lFa67Y="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -297,10 +273,9 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoaderDemo.html",
-          "hash": "8x+/yFyIfyPeZNHXvNMnAA=="
+          "hash": "Nk6Ci0vj1aOSzqn1nU09F40IAD20lEJy7k/D7YoLBSA="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -309,10 +284,9 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "+L71E8pv5XU9V5ZLUNrjsQ=="
+          "hash": "x0/vCC5C/pzPGSK90d2L04FtPzPnNzpQa1A13X+6pA4="
         }
       },
-      "is_incremental": true,
       "version": ""
     },
     {
@@ -321,10 +295,9 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "EWcTMdVPjikHNvg1ZK8Dew=="
+          "hash": "KyzZV10iwGHVwZwdD2NTkKrqEX+bYdqUXKWiHzuy/Hg="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -335,7 +308,6 @@
           "relative_path": "images/icon.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -346,7 +318,6 @@
           "relative_path": "images/mp3_load_times_graph.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -355,10 +326,9 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "OW5L4uPgWDjM17CSp78ULw=="
+          "hash": "eqfuVzT4MTkDyBNSiIZ4MtYzcvyY2DYOM+ANe6WY6to="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -370,59 +340,10 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "xoOtEMlWhpEMSxtmcddzCw=="
+          "hash": "Gd4nAX9kuRv0bJMgFJrT92mb1th2ByiufGnLg2EujjM="
         }
       },
-      "is_incremental": false,
       "version": ""
-    }
-  ],
-  "incremental_info": [
-    {
-      "status": {
-        "can_incremental": true,
-        "incrementalPhase": "build",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 1
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 25,
-          "skipped_file_count": 25
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        }
-      }
-    },
-    {
-      "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
-        "incrementalPhase": "postProcessing",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {}
     }
   ],
   "version_info": {},
