@@ -120,10 +120,10 @@
 </code></pre>
 <p>Loading methods:</p>
 <ul>
-<li>load on demand (streaming AudioClip) - decodiong is done on demand in Unity thread</li>
-<li>load all parts in background thread - does not slow render loop, decoding is split into parts and executed in background thread</li>
+<li>load on demand (streaming AudioClip) - decoding is done on demand in Unity thread, ideal of long one time use only audio clips</li>
+<li>load all parts in background thread - does not slow Unity thread, decoding is split into parts and executed in background thread</li>
 <li>load all parts in Unity thread - decoding is split into parts and executed in Unity thread</li>
-<li>load all parts all at once in Unity thread - worst option, causes main Unity thread to freeze</li>
+<li>load all parts all at once in Unity thread - worst option, causes main Unity thread to freeze, but only working option on some platforms</li>
 </ul>
 <p>Includes third party compiled libraries NAudio, NVorbis and NLayer.</p>
 <p>Before shipping your game It’s better to make sure all your audio files are loadable. If some are not, you might be able to fix it by encoding them with different settings.</p>
@@ -131,12 +131,12 @@
 <p>WAV and AIFF are loadable on any platform if they are not compressed at all (only simple Pcm or IeeeFloat formats). If they are compressed Window’s ACM is used.</p>
 <p>Ogg is loadable only if it uses Xiph.org Ogg Skeleton container, to make sure that is the case you may use free audio software such as <a href="https://www.audacityteam.org/">https://www.audacityteam.org/</a> or some online convert tool such as <a href="https://audio.online-convert.com/">https://audio.online-convert.com/</a></p>
 <p>Unity does not support Streaming AudioClips in WebGL, they explain it here <a href="https://docs.unity3d.com/Manual/webgl-audio.html">https://docs.unity3d.com/Manual/webgl-audio.html</a>
-In WebGL, only <a class="xref" href="api/RuntimeAudioClipLoader.LoadMethod.html#RuntimeAudioClipLoader_LoadMethod_AllPartsInUnityThread">LoadMethod.AllPartsInUnityThread</a> is supported, it automatically reverts to it if it detects it's running inside WebGL.
+In WebGL, only <a href="xref:RuntimeAudioClipLoader.LoadMethod.AllPartsInUnityThread">LoadMethod.AllPartsInUnityThread</a> is supported, it automatically reverts to it if it detects it's running inside WebGL.
 In WebGL, the AudioClip is playable only once it's fully loaded, if you started playing it during loading you will not hear anything, you need to stop and start the AudioSource again.</p>
 <p>If you have any issues, feel free to contact me at nei.jakub@gmail.com.
 It would be nice to send a link to anything you have created with this asset.</p>
-<p>You can use either recommended OOP approach with instances of <a class="xref" href="api/RuntimeAudioClipLoader.AudioLoader.html">RuntimeAudioClipLoader.AudioLoader</a> or legacy static manager class <a href="xred:RuntimeAudioClipLoader.Manager">RuntimeAudioClipLoader.Manager</a>.</p>
-<p><a href="xred:RuntimeAudioClipLoader.Manager">RuntimeAudioClipLoader.Manager</a> is kept for backwards compatibility, and internally uses instances of <a class="xref" href="api/RuntimeAudioClipLoader.AudioLoader.html">RuntimeAudioClipLoader.AudioLoader</a>.</p>
+<p>You can use either recommended OOP approach with instances of <a href="xref:RuntimeAudioClipLoader.AudioLoader">RuntimeAudioClipLoader.AudioLoader</a> or legacy static manager class <a href="xred:RuntimeAudioClipLoader.Manager">RuntimeAudioClipLoader.Manager</a>.</p>
+<p><a href="xred:RuntimeAudioClipLoader.Manager">RuntimeAudioClipLoader.Manager</a> is kept for backwards compatibility, and internally uses instances of <a href="xref:RuntimeAudioClipLoader.AudioLoader">RuntimeAudioClipLoader.AudioLoader</a>.</p>
 <h1 id="used-libraries">Used libraries</h1>
 <p>Includes third party compiled libraries NAudio, NVorbis and NLayer:</p>
 <ol>
