@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Dropbox/Hot/Unity/RuntimeAudioClipLoader/neit.in/RuntimeAudioClipLoader/documentation_docfx_project",
+  "source_base_path": "C:/Dropbox/Hot/Unity/RuntimeAudioClipLoader/Documentation/documentation_docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -31,7 +31,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.AudioDataReader.html",
-          "hash": "Tffbd6wvg8qI6de21lqKxJuP61839o2vdo5yBiSHz50="
+          "hash": "MnXA4b4nbuWtz9ETiMRMI/tI3rqid+PmjR9nkO75EjQ="
         }
       },
       "version": ""
@@ -97,7 +97,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.ReadFullyStream.html",
-          "hash": "NtNOMVYGeBYmF7xPVPAhAAqHh4LR55r0+TLqcoMYG18="
+          "hash": "mNCraimnCH+XaBUoHUSss8Ugi6lSqzVYWlg/olrPkiI="
         }
       },
       "version": ""
@@ -108,7 +108,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoader.Internal.UnityMainThreadRunner.html",
-          "hash": "JkXk0vjm2bFN6g2MIVc6IsoD25XttmpcEl4YUe0SdOw="
+          "hash": "4hdS47Wdv/VRoKkCpm5OamkfZuhbgRv6ShpNBNksYUg="
         }
       },
       "version": ""
@@ -229,7 +229,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoaderDemo.LoadAllStreamingAssets.html",
-          "hash": "XEeZ4GUew4rf1T2yf0vr1ANY/z4M0a8sWdVkk/lHgPU="
+          "hash": "yQ8WBZGpdMdX4YGbJy92WGZqyOm1VXstHpNfU6+wgdw="
         }
       },
       "version": ""
@@ -240,7 +240,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoaderDemo.LoadFromStreamingAssetsOrInternet.html",
-          "hash": "zUWqpW+ARru6GLxcXCe7ev4AkARRXsXAtHXlDV6Rv3k="
+          "hash": "8RPj3BdzyP8DoHt+c+YYF+/UPttK2pC+f3mV7MQrNck="
         }
       },
       "version": ""
@@ -251,7 +251,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoaderDemo.SimplestLoadFromDisk.html",
-          "hash": "+/Q1XEoBhWqSjgkCNKkhRrcd42AeZ7dEANtyKJee2nw="
+          "hash": "CC5jqFzqjh/9WrBJ6XtM0mxOJc3j3ffEwB2E2PGjhfc="
         }
       },
       "version": ""
@@ -262,7 +262,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RuntimeAudioClipLoaderDemo.SimplestLoadFromInternet.html",
-          "hash": "VQlivpaesBkBMSswY/1lpXgNL7s5KUumFQRD7lFa67Y="
+          "hash": "IDK/Y1pHPfa/TrcqybWZPEXmizH86tleqC7Gi4myzQs="
         }
       },
       "version": ""
@@ -326,7 +326,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "eqfuVzT4MTkDyBNSiIZ4MtYzcvyY2DYOM+ANe6WY6to="
+          "hash": "dA/pmQKcPDILsvVXGhcoXrDb9pe2Yz0xViUud3LMlwI="
         }
       },
       "version": ""
@@ -340,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "Gd4nAX9kuRv0bJMgFJrT92mb1th2ByiufGnLg2EujjM="
+          "hash": "9aNLPPIHRsuH0/ON2VscIh7s+ecoDszDYoXHgCzF/Io="
         }
       },
       "version": ""

@@ -56,18 +56,19 @@
 <p>Runtime AudioClip Loader allows you to load MP3, WAV, Ogg, AIFF into Unity's AudioClip from file (or bytes stream) on many platforms.</p>
 <p>Audio files are loaded into Unity’s AudioClip, thus audio mixers, spatial audio, AudioSource are fully supported.</p>
 <p>Includes example scenes and scripts.</p>
-<p>Works with Unity 2018 and up.</p>
 <p>Possible uses:</p>
 <ul>
 <li>download and play all 4 formats from internet</li>
 <li>add support for modding into your game, as your players can easily replace sounds</li>
 <li>put your sounds outside Unity project to get theoretically faster build times</li>
 </ul>
-<p>Platforms:</p>
+<p>Tested on:</p>
 <ul>
-<li>Tested and fully working on Windows</li>
-<li>All other platforms are theoretically supported, I tested few but I don't guarantee anything</li>
+<li>Windows</li>
+<li>WebGL</li>
 </ul>
+<p>Works with IL2CPP</p>
+<p>Uses fully mannaged libraries so all other platforms are theoretically supported.</p>
 <table>
 <thead>
 <tr>
@@ -99,12 +100,12 @@
 <tr>
 <td>AIFF</td>
 <td>full support</td>
-<td>full support</td>
+<td>only if no compression is used</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
-<p>Example of loading and playing audio file (any format) from anywhere on your disk.</p>
+<p>Simple example of loading and playing audio file (any format) from anywhere on your disk.</p>
 <pre><code>	var config = new AudioLoaderConfig();
 	config.DataStream = File.OpenRead(pathToAudioFile);
 	var loader = new AudioLoader(config);
@@ -117,12 +118,12 @@
 	audioSource.clip = loader.AudioClip;
 	audioSource.Play();
 </code></pre>
-<p>Supported loading methods:</p>
+<p>Loading methods:</p>
 <ul>
-<li>load on demand (streaming AudioClip)</li>
-<li>load all parts in background thread - does not slow render loop</li>
-<li>load all parts in Unity thread</li>
-<li>load all parts all at once in Unity thread</li>
+<li>load on demand (streaming AudioClip) - decodiong is done on demand in Unity thread</li>
+<li>load all parts in background thread - does not slow render loop, decoding is split into parts and executed in background thread</li>
+<li>load all parts in Unity thread - decoding is split into parts and executed in Unity thread</li>
+<li>load all parts all at once in Unity thread - worst option, causes main Unity thread to freeze</li>
 </ul>
 <p>Includes third party compiled libraries NAudio, NVorbis and NLayer.</p>
 <p>Before shipping your game It’s better to make sure all your audio files are loadable. If some are not, you might be able to fix it by encoding them with different settings.</p>
@@ -133,7 +134,7 @@
 In WebGL, only <a class="xref" href="api/RuntimeAudioClipLoader.LoadMethod.html#RuntimeAudioClipLoader_LoadMethod_AllPartsInUnityThread">LoadMethod.AllPartsInUnityThread</a> is supported, it automatically reverts to it if it detects it's running inside WebGL.
 In WebGL, the AudioClip is playable only once it's fully loaded, if you started playing it during loading you will not hear anything, you need to stop and start the AudioSource again.</p>
 <p>If you have any issues, feel free to contact me at nei.jakub@gmail.com.
-It would be nice to send us a link to anything you have created with this asset.</p>
+It would be nice to send a link to anything you have created with this asset.</p>
 <p>You can use either recommended OOP approach with instances of <a class="xref" href="api/RuntimeAudioClipLoader.AudioLoader.html">RuntimeAudioClipLoader.AudioLoader</a> or legacy static manager class <a href="xred:RuntimeAudioClipLoader.Manager">RuntimeAudioClipLoader.Manager</a>.</p>
 <p><a href="xred:RuntimeAudioClipLoader.Manager">RuntimeAudioClipLoader.Manager</a> is kept for backwards compatibility, and internally uses instances of <a class="xref" href="api/RuntimeAudioClipLoader.AudioLoader.html">RuntimeAudioClipLoader.AudioLoader</a>.</p>
 <h1 id="used-libraries">Used libraries</h1>
@@ -176,7 +177,7 @@ It would be nice to send us a link to anything you have created with this asset.
 <li>Fixed issue where WebGL creates AudioClip with less samples than provided</li>
 <li>Fixed few issues in Mac OS X build</li>
 <li>Fixed LoadMethod config</li>
-<li>Dropped Unity 4 and 5 support, oldest supported Unity version is now 2018</li>
+<li>Dropped older Unity support</li>
 </ul>
 <h2 id="20">2.0</h2>
 <ul>
