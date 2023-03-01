@@ -53,22 +53,50 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="overview">Overview</h1>
 
-<p>Runtime AudioClip Loader allows you to load MP3, WAV, Ogg, AIFF into Unity's AudioClip from file (or bytes stream) on many platforms.</p>
-<p>Audio files are loaded into Unity’s AudioClip, thus audio mixers, spatial audio, AudioSource are fully supported.</p>
-<p>Includes example scenes and scripts.</p>
-<p>Possible uses:</p>
+<p><strong>Runtime AudioClip Loader</strong> allows you to load <strong>MP3, WAV, Ogg, AIFF</strong> into Unity's AudioClip from file or internet on many platforms.<br>
+<br>
+Audio files are loaded into Unity’s AudioClip, thus audio mixers, spatial audio and AudioSource are fully supported. <br>
+<br>
+<a href="https://jakubnei.github.io/RuntimeAudioClipLoader/">Documentation</a><br>
+<a href="mailto:nei.jakub@gmail.com?subject=Runtime AudioClip Loader&body=Hello, Iam writing to you in regards to your Unity Asset Store Asset Runtime AudioClip Loader.">Support</a><br>
+<br>
+<strong>Demos</strong><br>
+<a href="https://jakubnei.github.io/RuntimeAudioClipLoader/demo/WebGL_2022.2.6f1/">WebGL</a> | <a href="https://www.dropbox.com/s/f0270247uep6jmj/Windows_IL2CPP_2022.2.6f1.zip?dl=0">Windows IL2CPP</a> | <a href="https://www.dropbox.com/s/bicc9g9vfu3l0v4/Windows_Mono_2022.2.6f1.zip?dl=0">Windows Mono</a><br>
+<br>
+Includes example scenes and scripts.<br>
+<br>
+<strong>Compatibility</strong><br>
+• Windows<br>
+• WebGL<br>
+• IL2CPP<br>
+• Compatible with Unity <strong>2020.3 - 2023</strong><br>
+<br>
+Uses fully mannaged libraries as fallback thus all platforms are theoretically supported.<br>
+<br>
+<strong>Possible uses</strong><br>
+• download and play all 4 formats from internet<br>
+• add support for modding into your game, as your players can easily replace sounds<br>
+• put your sounds outside Unity project to get theoretically faster build times<br></p>
+<h1 id="documentation">Documentation</h1>
+<p>Simple example of loading and playing audio file (any format) from anywhere on your disk:</p>
+<pre><code>	var config = new AudioLoaderConfig();
+	config.DataStream = File.OpenRead(pathToAudioFile);
+	var loader = new AudioLoader(config);
+	loader.StartLoading();
+	while (!loader.IsLoadingDone)
+		yield return new WaitForEndOfFrame();
+	var audioSource = GetComponent&lt;AudioSource&gt;();
+	audioSource.clip = loader.AudioClip;
+	audioSource.Play();
+</code></pre>
+<p>Loading methods:</p>
 <ul>
-<li>download and play all 4 formats from internet</li>
-<li>add support for modding into your game, as your players can easily replace sounds</li>
-<li>put your sounds outside Unity project to get theoretically faster build times</li>
+<li>load on demand (streaming AudioClip) - decoding is done on demand in Unity thread, ideal for long audio clips you will use only once</li>
+<li>load all parts in background thread - does not slow Unity thread, decoding is split into parts and executed in background thread, slowest but does not cause any FPS hitch or drop at all, AudioClip can be played after first part is loaded</li>
+<li>load all parts in Unity thread - decoding is split into parts and executed in Unity thread, AudioClip can be played after first part is loaded</li>
+<li>load all parts all at once in Unity thread - worst option, causes main Unity thread to freeze, supported because this is the only working method on some platforms</li>
 </ul>
-<p>Tested on:</p>
-<ul>
-<li>Windows</li>
-<li>WebGL</li>
-</ul>
-<p>Works with IL2CPP</p>
-<p>Uses fully mannaged libraries so all other platforms are theoretically supported.</p>
+<p>When Unity can't use native Windows decoder it fall backs to mannaged decoders which come with many limitations as described in table bellow.</p>
 <table>
 <thead>
 <tr>
@@ -105,70 +133,47 @@
 </tr>
 </tbody>
 </table>
-<p>Simple example of loading and playing audio file (any format) from anywhere on your disk.</p>
-<pre><code>	var config = new AudioLoaderConfig();
-	config.DataStream = File.OpenRead(pathToAudioFile);
-	var loader = new AudioLoader(config);
-	loader.StartLoading();
-
-	while (!loader.IsLoadingDone)
-		yield return new WaitForEndOfFrame();
-
-	var audioSource = GetComponent&lt;AudioSource&gt;();
-	audioSource.clip = loader.AudioClip;
-	audioSource.Play();
-</code></pre>
-<p>Loading methods:</p>
-<ul>
-<li>load on demand (streaming AudioClip) - decoding is done on demand in Unity thread, ideal of long one time use only audio clips</li>
-<li>load all parts in background thread - does not slow Unity thread, decoding is split into parts and executed in background thread</li>
-<li>load all parts in Unity thread - decoding is split into parts and executed in Unity thread</li>
-<li>load all parts all at once in Unity thread - worst option, causes main Unity thread to freeze, but only working option on some platforms</li>
-</ul>
-<p>Includes third party compiled libraries NAudio, NVorbis and NLayer.</p>
 <p>Before shipping your game It’s better to make sure all your audio files are loadable. If some are not, you might be able to fix it by encoding them with different settings.</p>
 <p>Remember to Destroy(audioClip); once you are done using it, otherwise you risk running out of memory.</p>
 <p>WAV and AIFF are loadable on any platform if they are not compressed at all (only simple Pcm or IeeeFloat formats). If they are compressed Window’s ACM is used.</p>
 <p>Ogg is loadable only if it uses Xiph.org Ogg Skeleton container, to make sure that is the case you may use free audio software such as <a href="https://www.audacityteam.org/">https://www.audacityteam.org/</a> or some online convert tool such as <a href="https://audio.online-convert.com/">https://audio.online-convert.com/</a></p>
 <p>Unity does not support Streaming AudioClips in WebGL, they explain it here <a href="https://docs.unity3d.com/Manual/webgl-audio.html">https://docs.unity3d.com/Manual/webgl-audio.html</a>
-In WebGL, only <a href="xref:RuntimeAudioClipLoader.LoadMethod.AllPartsInUnityThread">LoadMethod.AllPartsInUnityThread</a> is supported, it automatically reverts to it if it detects it's running inside WebGL.
+In WebGL, only <a class="xref" href="api/RuntimeAudioClipLoader.LoadMethod.html#RuntimeAudioClipLoader_LoadMethod_AllPartsInUnityThread">LoadMethod.AllPartsInUnityThread</a> is supported, it automatically reverts to it if it detects it's running inside WebGL.
 In WebGL, the AudioClip is playable only once it's fully loaded, if you started playing it during loading you will not hear anything, you need to stop and start the AudioSource again.</p>
-<p>If you have any issues, feel free to contact me at nei.jakub@gmail.com.
+<p>If you have any issues, feel free to contact me at [nei.jakub@gmail.com](<a href="mailto:nei.jakub@gmail.com?subject=Runtime">nei.jakub@gmail.com?subject=Runtime</a> AudioClip Loader&amp;body=Hello, Iam writing to you in regards to your Unity Asset Store Asset Runtime AudioClip Loader.)
 It would be nice to send a link to anything you have created with this asset.</p>
-<p>You can use either recommended OOP approach with instances of <a href="xref:RuntimeAudioClipLoader.AudioLoader">RuntimeAudioClipLoader.AudioLoader</a> or legacy static manager class <a href="xred:RuntimeAudioClipLoader.Manager">RuntimeAudioClipLoader.Manager</a>.</p>
-<p><a href="xred:RuntimeAudioClipLoader.Manager">RuntimeAudioClipLoader.Manager</a> is kept for backwards compatibility, and internally uses instances of <a href="xref:RuntimeAudioClipLoader.AudioLoader">RuntimeAudioClipLoader.AudioLoader</a>.</p>
-<h1 id="used-libraries">Used libraries</h1>
+<p>You can use either recommended OOP approach with instances of <a class="xref" href="api/RuntimeAudioClipLoader.AudioLoader.html">RuntimeAudioClipLoader.AudioLoader</a> or legacy static manager class <a class="xref" href="api/RuntimeAudioClipLoader.Manager.html">RuntimeAudioClipLoader.Manager</a>.</p>
+<p><a class="xref" href="api/RuntimeAudioClipLoader.Manager.html">RuntimeAudioClipLoader.Manager</a> is kept for backwards compatibility and internally uses instances of <a class="xref" href="api/RuntimeAudioClipLoader.AudioLoader.html">RuntimeAudioClipLoader.AudioLoader</a>.</p>
+<h1 id="third-party-libraries">Third party libraries</h1>
 <p>Includes third party compiled libraries NAudio, NVorbis and NLayer:</p>
 <ol>
-<li><a href="https://naudio.codeplex.com/">https://naudio.codeplex.com/</a> (<a href="https://github.com/naudio/NAudio">https://github.com/naudio/NAudio</a>)</li>
-<li><a href="https://nvorbis.codeplex.com/">https://nvorbis.codeplex.com/</a> (<a href="https://github.com/ioctlLR/NVorbis">https://github.com/ioctlLR/NVorbis</a>)</li>
-<li><a href="https://nlayer.codeplex.com/">https://nlayer.codeplex.com/</a></li>
+<li><a href="https://github.com/naudio/NAudio">https://github.com/naudio/NAudio</a></li>
+<li><a href="https://github.com/NVorbis/NVorbis">https://github.com/NVorbis/NVorbis</a></li>
+<li><a href="https://github.com/naudio/NLayer">https://github.com/naudio/NLayer</a></li>
 </ol>
+<p><strong>NAudio</strong></p>
 <ul>
-<li><p>NAudio supports WAV, MP3, WAV and AIFF formats</p>
-</li>
-<li><p>NAudio uses interop with Windows's Multimedia Extensions (MME) and Audio Compression Manager (ACM)</p>
-</li>
-<li><p>NAudio uses ACM for WAV and AIFF if they are compressed.</p>
-</li>
-<li><p>NAudio uses MME for MP3 decoding.</p>
-</li>
-<li><p>Above means same formats may only be loadable on Windows</p>
-</li>
-<li><p>NVorbis adds managed Ogg support (thru fully managed C# code).</p>
-</li>
-<li><p>NLayer adds managed MP3 support (thru fully managed C# code).</p>
-</li>
-<li><p>NLayer is able to load only stereo MP3s with 44.1kHz sample rate.</p>
-</li>
-<li><p>NVorbis and NLayer are decoders only, it's not possible to encode OGG and MP3 with them.</p>
-</li>
+<li>supports WAV, MP3, WAV and AIFF formats</li>
+<li>uses interop with Windows's Multimedia Extensions (MME) and Audio Compression Manager (ACM)</li>
+<li>uses ACM for WAV and AIFF if they are compressed.</li>
+<li>uses MME for MP3 decoding.</li>
 </ul>
+<p>Above means same formats may only be loadable on Windows</p>
+<p><strong>NVorbis</strong></p>
+<ul>
+<li>adds managed Ogg support (through fully managed C# code).</li>
+</ul>
+<p><strong>Layer</strong></p>
+<ul>
+<li>adds managed MP3 support (through fully managed C# code).</li>
+<li>is able to load only stereo MP3s with 44.1kHz sample rate.</li>
+</ul>
+<p>NVorbis and NLayer are decoders only, it's not possible to encode OGG and MP3 with them.</p>
 <p>By default, based on UnityEngine.Application.platform it is automatically decided whether to use NAudio or NLayer for MP3 decoding.</p>
 <p>NLayer fully managed C# MP3 decoder failed on 55 out of 1552 test cases and was on average 7.2 times slower than Windows interop MP3 decoder:</p>
 <p><img src="images/mp3_load_times_graph.png" alt="" title="Comparison of times between Windows interop MP3 and NLayer MP3 loading"></p>
 <h1 id="changelog">Changelog</h1>
-<h2 id="30">3.0</h2>
+<p><strong>3.0</strong></p>
 <ul>
 <li>Updated NAudio and NLayer to latest versions</li>
 <li>NLayer changed license to MIT</li>
@@ -179,7 +184,7 @@ It would be nice to send a link to anything you have created with this asset.</p
 <li>Fixed LoadMethod config</li>
 <li>Dropped older Unity support</li>
 </ul>
-<h2 id="20">2.0</h2>
+<p><strong>2.0</strong></p>
 <ul>
 <li>Added NLayer for multiplatform MP3 loading</li>
 <li>Added object oriented approach</li>
@@ -189,12 +194,12 @@ It would be nice to send a link to anything you have created with this asset.</p
 <li>Decreased memory consumption</li>
 <li>Fixed various bugs</li>
 </ul>
-<h2 id="11">1.1</h2>
+<p><strong>1.1</strong></p>
 <ul>
 <li>Added example: load and play from internet</li>
 <li>Added compatibility for older Unity versions</li>
 </ul>
-<h2 id="10">1.0</h2>
+<p><strong>1.0</strong></p>
 <ul>
 <li>First release</li>
 </ul>

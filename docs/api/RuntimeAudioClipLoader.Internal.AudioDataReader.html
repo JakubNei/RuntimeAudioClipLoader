@@ -80,7 +80,6 @@ Has addes support for mannaged MP3 with NLayer.NAudioSupport.Mp3FrameDecompresso
   <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">System.IDisposable</span></div>
-    <div><span class="xref">System.IAsyncDisposable</span></div>
     <div><span class="xref">NAudio.Wave.IWaveProvider</span></div>
     <div><span class="xref">NAudio.Wave.ISampleProvider</span></div>
   </div>
@@ -192,24 +191,6 @@ Has addes support for mannaged MP3 with NLayer.NAudioSupport.Mp3FrameDecompresso
       <span class="xref">System.IO.Stream.WriteByte(byte)</span>
     </div>
     <div>
-      <span class="xref">System.IO.Stream.CopyToAsync(System.IO.Stream, System.Threading.CancellationToken)</span>
-    </div>
-    <div>
-      <span class="xref">System.IO.Stream.DisposeAsync()</span>
-    </div>
-    <div>
-      <span class="xref">System.IO.Stream.Read(System.Span&lt;byte&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">System.IO.Stream.ReadAsync(System.Memory&lt;byte&gt;, System.Threading.CancellationToken)</span>
-    </div>
-    <div>
-      <span class="xref">System.IO.Stream.Write(System.ReadOnlySpan&lt;byte&gt;)</span>
-    </div>
-    <div>
-      <span class="xref">System.IO.Stream.WriteAsync(System.ReadOnlyMemory&lt;byte&gt;, System.Threading.CancellationToken)</span>
-    </div>
-    <div>
       <span class="xref">System.IO.Stream.CanTimeout</span>
     </div>
     <div>
@@ -256,7 +237,7 @@ Has addes support for mannaged MP3 with NLayer.NAudioSupport.Mp3FrameDecompresso
   <h6><strong>Assembly</strong>: Assembly-CSharp.dll</h6>
   <h5 id="RuntimeAudioClipLoader_Internal_AudioDataReader_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AudioDataReader : WaveStream, IDisposable, IAsyncDisposable, IWaveProvider, ISampleProvider</code></pre>
+    <pre><code class="lang-csharp hljs">public class AudioDataReader : WaveStream, IDisposable, IWaveProvider, ISampleProvider</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -663,9 +644,6 @@ public const bool IsManagedMp3DecoderAvailable = true</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">System.IDisposable</span>
-  </div>
-  <div>
-      <span class="xref">System.IAsyncDisposable</span>
   </div>
   <div>
       <span class="xref">NAudio.Wave.IWaveProvider</span>
